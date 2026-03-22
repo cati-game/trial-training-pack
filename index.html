@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TrackMania Worlds</title>
+<style>
+    :root {
+        --bg-dark: #120000;
+        --card-bg: #1e0505;
+        --text-light: #f5e6c8;
+    }
+
+    body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(180deg, #0c0000, var(--bg-dark));
+        color: var(--text-light);
+    }
+
+    h1 {
+        text-align: center;
+        padding: 24px;
+        letter-spacing: 2px;
+    }
+
+    /* Difficulty themes */
+    .difficulty.easy {
+        --accent: #4caf50;
+        --bg-section: #0f1a0f;
+    }
+
+    .difficulty.medium {
+        --accent: #ff9800;
+        --bg-section: #1a1408;
+    }
+
+    .difficulty.hard {
+        --accent: #f44336;
+        --bg-section: #1a0a0a;
+    }
+
+    .difficulty {
+        margin: 32px auto;
+        max-width: 1200px;
+        padding: 16px;
+        background: var(--bg-section);
+        border: 1px solid var(--accent);
+    }
+
+    .difficulty-title {
+        font-size: 1.6em;
+        margin-bottom: 16px;
+        color: var(--accent);
+        border-bottom: 2px solid var(--accent);
+        padding-bottom: 6px;
+    }
+
+    .map-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 20px;
+    }
+
+    .map-card {
+        background: var(--card-bg);
+        border: 1px solid var(--accent);
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        position: relative;
+    }
+
+    .map-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 0 18px var(--accent);
+    }
+
+    .map-thumb {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-bottom: 1px solid var(--accent);
+    }
+
+    .tmx-link {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: rgba(0,0,0,0.7);
+        padding: 4px;
+    }
+
+    .tmx-link img {
+        height: 26px;
+        display: block;
+    }
+
+    .map-content {
+        padding: 14px;
+    }
+
+    .map-name {
+        font-size: 1.1em;
+        color: var(--accent);
+        margin-bottom: 4px;
+    }
+
+    .map-author {
+        font-size: 0.9em;
+        opacity: 0.85;
+        margin-bottom: 10px;
+    }
+
+    .times {
+        font-size: 0.85em;
+        line-height: 1.5;
+    }
+
+    .time-label {
+        color: var(--accent);
+    }
+
+    .pb-label {
+        color: #4caf50;
+    }
+
+    .badge {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        background: var(--accent);
+        padding: 4px 8px;
+        font-size: 0.75em;
+        font-weight: bold;
+        border-radius: 4px;
+        z-index: 2;
+    }
+    .cp-label {
+        color: var(--accent);
+    }
+</style>
+</head>
+<body>
+
+<h1>TrackMania Trial Pack</h1>
+
+<!-- EASY -->
+<div class="difficulty easy">
+    <div class="difficulty-title">Easy</div>
+    <div class="map-grid">
+
+        <div class="map-card" onclick="openTrackplayNF(13262489)">
+            <div class="badge">Easy</div>
+
+            <a class="tmx-link"
+               href="https://tmnf.exchange/trackshow/13262489"
+               target="_blank"
+               onclick="event.stopPropagation();">
+                <img src="https://images.mania.exchange/logos/tm1x/logo.png">
+            </a>
+
+            <img class="map-thumb"
+                 src="https://tmnf.exchange/trackshow/13262489/image/1">
+
+            <div class="map-content">
+                <div class="map-name">piece by piece</div>
+                <div class="map-author">by cati</div>
+            <div class="times">
+                <div><span class="time-label">AT:</span> 1:04.51</div>
+                <div><span class="cp-label">CP:</span> 7</div>
+            </div>
+            </div>
+        </div>
+        <div class="map-card" onclick="openTrackplayNF(13262496)">
+            <div class="badge">Easy</div>
+
+            <a class="tmx-link"
+               href="https://tmnf.exchange/trackshow/13262496"
+               target="_blank"
+               onclick="event.stopPropagation();">
+                <img src="https://images.mania.exchange/logos/tm1x/logo.png">
+            </a>
+
+            <img class="map-thumb"
+                 src="https://tmnf.exchange/trackshow/13262496/image/1">
+
+            <div class="map-content">
+                <div class="map-name">box</div>
+                <div class="map-author">by cati</div>
+            <div class="times">
+                <div><span class="time-label">AT:</span> 42.91</div>
+                <div><span class="cp-label">CP:</span> 5</div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- MEDIUM -->
+<div class="difficulty medium">
+    <div class="difficulty-title">Medium</div>
+    <div class="map-grid">
+
+        <div class="map-card" onclick="openTrackplayNF(13262506)">
+            <div class="badge">Medium</div>
+
+            <a class="tmx-link"
+               href="https://tmnf.exchange/trackshow/13262506"
+               target="_blank"
+               onclick="event.stopPropagation();">
+                <img src="https://images.mania.exchange/logos/tm1x/logo.png">
+            </a>
+
+            <img class="map-thumb"
+                 src="https://tmnf.exchange/trackshow/13262506/image/1">
+
+            <div class="map-content">
+                <div class="map-name">food for thought</div>
+                <div class="map-author">by cati</div>
+            <div class="times">
+                <div><span class="time-label">AT:</span> 47.49</div>
+                <div><span class="cp-label">CP:</span> 3</div>
+            </div>
+            </div>
+        </div>
+        <div class="map-card" onclick="openTrackplayNF(13262518)">
+            <div class="badge">Medium</div>
+
+            <a class="tmx-link"
+               href="https://tmnf.exchange/trackshow/13262518"
+               target="_blank"
+               onclick="event.stopPropagation();">
+                <img src="https://images.mania.exchange/logos/tm1x/logo.png">
+            </a>
+
+            <img class="map-thumb"
+                 src="https://tmnf.exchange/trackshow/13262518/image/1">
+
+            <div class="map-content">
+                <div class="map-name">sunset drive</div>
+                <div class="map-author">by cati</div>
+            <div class="times">
+                <div><span class="time-label">AT:</span> 56.00</div>
+                <div><span class="cp-label">CP:</span> 3</div>
+            </div>
+            </div>
+        </div>
+        <div class="map-card" onclick="openTrackplayNF(13262511)">
+            <div class="badge">Medium</div>
+
+            <a class="tmx-link"
+               href="https://tmnf.exchange/trackshow/13262511"
+               target="_blank"
+               onclick="event.stopPropagation();">
+                <img src="https://images.mania.exchange/logos/tm1x/logo.png">
+            </a>
+
+            <img class="map-thumb"
+                 src="https://tmnf.exchange/trackshow/13262511/image/1">
+
+            <div class="map-content">
+                <div class="map-name">castle in the sky</div>
+                <div class="map-author">by cati</div>
+            <div class="times">
+                <div><span class="time-label">AT:</span> 1:08.92</div>
+                <div><span class="cp-label">CP:</span> 4</div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- HARD -->
+<div class="difficulty hard">
+    <div class="difficulty-title">Hard</div>
+    <div class="map-grid">
+
+        <div class="map-card" onclick="openTrackplayNF(13262523)">
+            <div class="badge">Hard</div>
+
+            <a class="tmx-link"
+               href="https://tmnf.exchange/trackshow/13262523"
+               target="_blank"
+               onclick="event.stopPropagation();">
+                <img src="https://images.mania.exchange/logos/tm1x/logo.png">
+            </a>
+
+            <img class="map-thumb"
+                 src="https://tmnf.exchange/trackshow/13262523/image/1">
+
+            <div class="map-content">
+                <div class="map-name">pink times</div>
+                <div class="map-author">by cati</div>
+            <div class="times">
+                <div><span class="time-label">AT:</span> 53.11</div>
+                <div><span class="cp-label">CP:</span> 2</div>
+            </div>
+            </div>
+        </div>
+        <div class="map-card" onclick="openTrackplayNF(13262727)">
+            <div class="badge">Hard</div>
+
+            <a class="tmx-link"
+               href="https://tmnf.exchange/trackshow/13262727"
+               target="_blank"
+               onclick="event.stopPropagation();">
+                <img src="https://images.mania.exchange/logos/tm1x/logo.png">
+            </a>
+
+            <img class="map-thumb"
+                 src="https://tmnf.exchange/trackshow/13262727/image/1">
+
+            <div class="map-content">
+                <div class="map-name">airborne</div>
+                <div class="map-author">by cati</div>
+            <div class="times">
+                <div><span class="time-label">AT:</span> 1:37.30</div>
+                <div><span class="cp-label">CP:</span> 4</div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function openTrackplayNF(id) {
+        window.open(`https://tmnf.exchange/trackplay/${id}`, "_blank");
+    }
+</script>
+
+</body>
+</html>
